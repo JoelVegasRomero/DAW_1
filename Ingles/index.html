@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudio de Verbos - Examen Viernes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Estudio de Verbos y Vocabulario</h1>
+
+    <section class="quiz">
+      <h2>¿Cuál es el sinónimo de "fire"?</h2>
+      <form id="quiz-form">
+        <label><input type="radio" name="q1" value="dismiss"> Dismiss</label><br>
+        <label><input type="radio" name="q1" value="hire"> Hire</label><br>
+        <label><input type="radio" name="q1" value="quit"> Quit</label><br>
+        <button type="submit">Comprobar</button>
+      </form>
+      <p id="result"></p>
+    </section>
+
+    <section class="fill-the-gap">
+      <h2>Completa la frase:</h2>
+      <p>My boss always __________ overtime.</p>
+      <input type="text" id="gap" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap()">Comprobar</button>
+      <p id="gap-result"></p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
