@@ -15,6 +15,7 @@ function setupQuestion(formId, correctValue, resultId) {
 
 setupQuestion("q1-form", "dismiss", "q1-result");
 setupQuestion("q2-form", "postularse", "q2-result");
+setupQuestion("q3-form", "currículum", "q3-result");
 
 function checkGap(inputId, expected) {
   const userInput = document.getElementById(inputId).value.trim().toLowerCase();
