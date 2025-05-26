@@ -2,31 +2,75 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Estudio de Verbos - Examen Viernes</title>
+  <title>Examen de Verbos - Estudio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Estudio de Verbos y Vocabulario</h1>
+    <h1>Examen de Verbos - Viernes</h1>
 
     <section class="quiz">
       <h2>¿Cuál es el sinónimo de "fire"?</h2>
-      <form id="quiz-form">
+      <form id="q1-form">
         <label><input type="radio" name="q1" value="dismiss"> Dismiss</label><br>
         <label><input type="radio" name="q1" value="hire"> Hire</label><br>
         <label><input type="radio" name="q1" value="quit"> Quit</label><br>
         <button type="submit">Comprobar</button>
+        <p id="q1-result"></p>
       </form>
-      <p id="result"></p>
+    </section>
+
+    <section class="quiz">
+      <h2>¿Qué significa "apply for"?</h2>
+      <form id="q2-form">
+        <label><input type="radio" name="q2" value="postularse"> Postularse</label><br>
+        <label><input type="radio" name="q2" value="despedir"> Despedir</label><br>
+        <label><input type="radio" name="q2" value="trabajar horas extra"> Trabajar horas extra</label><br>
+        <button type="submit">Comprobar</button>
+        <p id="q2-result"></p>
+      </form>
     </section>
 
     <section class="fill-the-gap">
       <h2>Completa la frase:</h2>
-      <p>My boss always __________ overtime.</p>
-      <input type="text" id="gap" placeholder="Escribe tu respuesta">
-      <button onclick="checkGap()">Comprobar</button>
-      <p id="gap-result"></p>
+      <p>Ikea __________ 100 employees every year.</p>
+      <input type="text" id="gap1" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap('gap1', 'hires')">Comprobar</button>
+      <p id="gap1-result"></p>
     </section>
+
+    <section class="fill-the-gap">
+      <h2>Completa la frase:</h2>
+      <p>Peter complained about his shift and the next day, the boss __________ him.</p>
+      <input type="text" id="gap2" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap('gap2', 'fired')">Comprobar</button>
+      <p id="gap2-result"></p>
+    </section>
+
+    <section class="fill-the-gap">
+      <h2>Completa la frase:</h2>
+      <p>My sister __________ her job last year because she didn't like the conditions.</p>
+      <input type="text" id="gap3" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap('gap3', 'left')">Comprobar</button>
+      <p id="gap3-result"></p>
+    </section>
+
+    <section class="fill-the-gap">
+      <h2>Completa la frase:</h2>
+      <p>My boss always __________ overtime. He stays two or three hours after 6.</p>
+      <input type="text" id="gap4" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap('gap4', 'works')">Comprobar</button>
+      <p id="gap4-result"></p>
+    </section>
+
+    <section class="fill-the-gap">
+      <h2>Completa la frase:</h2>
+      <p>A high percentage of the population __________ unemployed.</p>
+      <input type="text" id="gap5" placeholder="Escribe tu respuesta">
+      <button onclick="checkGap('gap5', 'is')">Comprobar</button>
+      <p id="gap5-result"></p>
+    </section>
+
   </div>
   <script src="script.js"></script>
 </body>

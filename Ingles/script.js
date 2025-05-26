@@ -1,20 +1,27 @@
-document.getElementById("quiz-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const answer = document.querySelector('input[name="q1"]:checked');
-  const result = document.getElementById("result");
-  if (!answer) {
-    result.textContent = "Por favor selecciona una opción.";
-    return;
-  }
-  result.textContent = answer.value === "dismiss" ? "¡Correcto!" : "Incorrecto. La respuesta es 'Dismiss'.";
-});
 
-function checkGap() {
-  const userInput = document.getElementById("gap").value.trim().toLowerCase();
-  const gapResult = document.getElementById("gap-result");
-  if (userInput === "works") {
-    gapResult.textContent = "¡Correcto!";
+function setupQuestion(formId, correctValue, resultId) {
+  document.getElementById(formId).addEventListener("submit", function(e) {
+    e.preventDefault();
+    const selected = document.querySelector(`input[name="${formId.replace('-form','')}"]:checked`);
+    const result = document.getElementById(resultId);
+    if (!selected) {
+      result.textContent = "Selecciona una opción.";
+      return;
+    }
+    result.textContent = selected.value.toLowerCase() === correctValue.toLowerCase()
+      ? "¡Correcto!" : `Incorrecto. La respuesta es "${correctValue}".`;
+  });
+}
+
+setupQuestion("q1-form", "dismiss", "q1-result");
+setupQuestion("q2-form", "postularse", "q2-result");
+
+function checkGap(inputId, expected) {
+  const userInput = document.getElementById(inputId).value.trim().toLowerCase();
+  const result = document.getElementById(inputId + "-result");
+  if (userInput === expected.toLowerCase()) {
+    result.textContent = "¡Correcto!";
   } else {
-    gapResult.textContent = "Incorrecto. La respuesta correcta es 'works'.";
+    result.textContent = `Incorrecto. La respuesta correcta es "${expected}".`;
   }
 }
